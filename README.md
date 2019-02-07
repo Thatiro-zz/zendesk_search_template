@@ -6,19 +6,19 @@ More info about the [Zendesk Templates](https://developer.zendesk.com/apps/docs/
 ### FEATURES
 This application uses the Inbenta [search SDK](https://developers.inbenta.io/search/javascript-sdk/sdk-components) with the following used and supported components:
 
-Autocompleter
-Instants
-Last Chance
-Loader
-No Results
-Pagination
-Refinement Lists
-Refinement Tabs
-Results
-Results per Page Selector
-Router
-Sort By Selector
-Stats
+- Autocompleter
+- Instants
+- Last Chance
+- Loader
+- No Results
+- Pagination
+- Refinement Lists
+- Refinement Tabs
+- Results
+- Results per Page Selector
+- Router
+- Sort By Selector
+- Stats
 
 ### Setting up a Zendesk app (WIP)
 The purpose of this section is to be able to integrate the Inbenta search application into a Zendesk page.

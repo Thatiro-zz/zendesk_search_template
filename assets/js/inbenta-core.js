@@ -396,16 +396,6 @@
   }
 
   /*--------------------------------------------------
-  |                  initComponent
-  |---------------------------------------------------
-  |
-  | Function to initialize the SDK components
-  | @sdk object with the sdk initialized
-  | @components object with the sdk components configuration
-  |
-  */
-
-  /*--------------------------------------------------
   |                  initCustomEvents
   |---------------------------------------------------
   |
@@ -445,16 +435,13 @@
   			document.querySelector(components.autocompleter.input).value = this.query;
   		}
       // Hide Client's targetelem
-  		document.querySelector(components.results.container).style.display = 'none';
+      changeDisplay(components.results.container, 'none');
   		// Show sortBy and Results per page selector
   		if (this.hasResults) {
-  			if (components.sortBy) { document.querySelector('.inbenta-search-sortby').style.display = 'block'; }
-  			if (components.resultsPerPageSelector) { document.querySelector('.inbenta-search-results-per-page').style.display = 'block'; }
-  		} else {
-  			if (components.sortBy) { document.querySelector('.inbenta-search-sortby').style.display = 'none'; }
-  			if (components.resultsPerPageSelector) { document.querySelector('.inbenta-search-results-per-page').style.display = 'none'; }
-  		}
-
+        changeDisplay('.inbenta-search-sortby__icon', 'block');
+      } else {
+        changeDisplay('.inbenta-search-sortby__icon', 'none');
+      }
   		// Hide autocompleter when a search is done
   		if (components.autocompleter) { autocompleter.blur(); }
     });
@@ -500,8 +487,20 @@
   	    hasSubmit = logContactTicket(sdk, finalQuery, hasSubmit);
   	  });
   	}
+  }
 
+  /*--------------------------------------------------
+  |                  changeDisplay
+  |---------------------------------------------------
+  |
+  | Function to change the display of an element
+  | @selector string with the id or class to get the element
+  | @action string with the action to perfom (block or none)
+  |
+  */
 
+  function changeDisplay(selector, action) {
+    if (document.querySelector(selector)) { document.querySelector(selector).style.display = action; }
   }
 
   /*--------------------------------------------------

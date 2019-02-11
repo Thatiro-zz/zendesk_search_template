@@ -206,28 +206,28 @@ body #inbenta-search-deflections {
   body #inbenta-search-wrapper .inbenta-search-info-bar,
   body #inbenta-search-deflections .inbenta-search-info-bar {
     margin: 0; }
-    body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item,
-    body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item,
-    body #inbenta-search-deflections .inbenta-search-info-bar__refine__item {
+    body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon:before,
+    body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item .inbenta-search-results-per-page__icon:before,
+    body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon:before,
+    body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item .inbenta-search-results-per-page__icon:before,
+    body #inbenta-search-deflections .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon:before,
+    body #inbenta-search-deflections .inbenta-search-info-bar__refine__item .inbenta-search-results-per-page__icon:before {
+      color: #999999;
+      -webkit-transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s;
+      transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s; }
+    body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon,
+    body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon,
+    body #inbenta-search-deflections .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon {
       display: none; }
-      body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon:before,
-      body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item .inbenta-search-results-per-page__icon:before,
-      body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon:before,
-      body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item .inbenta-search-results-per-page__icon:before,
-      body #inbenta-search-deflections .inbenta-search-info-bar__refine__item .inbenta-search-sortby__icon:before,
-      body #inbenta-search-deflections .inbenta-search-info-bar__refine__item .inbenta-search-results-per-page__icon:before {
-        color: #999999;
-        -webkit-transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s;
-        transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s; }
-      body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item:hover .inbenta-search-sortby__icon:before,
-      body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item:hover .inbenta-search-results-per-page__icon:before,
-      body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item:hover .inbenta-search-sortby__icon:before,
-      body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item:hover .inbenta-search-results-per-page__icon:before,
-      body #inbenta-search-deflections .inbenta-search-info-bar__refine__item:hover .inbenta-search-sortby__icon:before,
-      body #inbenta-search-deflections .inbenta-search-info-bar__refine__item:hover .inbenta-search-results-per-page__icon:before {
-        color: #777777;
-        -webkit-transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s;
-        transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s; }
+    body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item:hover .inbenta-search-sortby__icon:before,
+    body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__item:hover .inbenta-search-results-per-page__icon:before,
+    body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item:hover .inbenta-search-sortby__icon:before,
+    body #inbenta-search-wrapper .inbenta-search-info-bar__refine__item:hover .inbenta-search-results-per-page__icon:before,
+    body #inbenta-search-deflections .inbenta-search-info-bar__refine__item:hover .inbenta-search-sortby__icon:before,
+    body #inbenta-search-deflections .inbenta-search-info-bar__refine__item:hover .inbenta-search-results-per-page__icon:before {
+      color: #777777;
+      -webkit-transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s;
+      transition: all 0.3s cubic-bezier(0.3, 0.01, 0.6, 0.99) 0s; }
     body #inbenta-search-wrapper-autocompleter .inbenta-search-info-bar__refine__options,
     body #inbenta-search-wrapper .inbenta-search-info-bar__refine__options,
     body #inbenta-search-deflections .inbenta-search-info-bar__refine__options {

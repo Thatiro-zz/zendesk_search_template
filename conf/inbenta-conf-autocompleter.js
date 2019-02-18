@@ -29,7 +29,6 @@ var inbApp = {
   appConfig: {
     autocompleter: {
       input: '#query', // Input to be linked to the autocompleter
-      form: '#formInbenta',
       target: '#inbenta-autocompleter',
       conf: {
         showViewAllButton: false
@@ -40,16 +39,9 @@ var inbApp = {
       target: '#inbenta-results',
       conf: {}
     },
-    instants: {
-      target: '#inbenta-instants',
-      input: ['#request_subject', '#request_description'],
-      conf: {}
+    search: {
+      active: false // This will activate or deactivate the Inbenta's search engine in the page, if deactivated is recommended to disable the router too
     },
-    lastChance: {
-      target: '#inbenta-last-chance',
-      input: ['#request_subject', '#request_description'],
-      conf: {}
-    }
   }
 }
 

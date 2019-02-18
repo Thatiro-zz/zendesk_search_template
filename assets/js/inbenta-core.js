@@ -380,6 +380,7 @@
   	if (components.autocompleter) {
   		autocompleter = sdk.component('autocompleter', components.autocompleter.target, components.autocompleter.conf);
   		var inputDiv = document.querySelector(components.autocompleter.input);
+      inputDiv.autocomplete = "off";
   		var inbentaSearchInput = inputDiv.cloneNode(false);
   		// If the search is activated replace the search bar
   		if (components.search && components.search.active) {

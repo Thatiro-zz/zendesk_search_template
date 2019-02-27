@@ -406,8 +406,8 @@
   |
   */
   function initCustomEvents(sdk, components) {
-  	var inputDiv = document.querySelector(components.autocompleter.input);
-  	if (inputDiv) {
+  	if (components.autocompleter) {
+      var inputDiv = document.querySelector(components.autocompleter.input);
   		inputDiv.addEventListener("keydown", function(e) {
   			// Show autocompleter when the user is typing
   			if (autocompleter) {
@@ -427,6 +427,11 @@
   			});
   		}
   	}
+
+    if (components.search && components.search.active) {
+      var query = getSearchParameters('query');
+      if (query) { results.setQuery(query); }
+    }
 
   	results.searchStore.on('result', function () {
   		if (document.querySelector(components.autocompleter.input)) {
@@ -527,6 +532,47 @@
         return hasSubmit;
       }
     }, 5000);
+  }
+
+  /*--------------------------------------------
+  |               getSearchParameters
+  |---------------------------------------------
+  |
+  | Get the value of the parameter desired by URL.
+  | @paramName: string of the name of the parameter, e.g: 'q'
+  | @return:
+  |
+  */
+
+  function getSearchParameters(paramName) {
+    //Getting the parameters
+    var params = [];
+    if (window.location.search) {
+      params = window.location.search.substring(1).split("?");
+    }
+    else {
+      params = window.location.hash.substring(1).split("?");
+    }
+    if (params.length > 1) {
+      params.forEach(function(param, index) {
+        if (index > 0) { params = params + '&' + param; }
+        else { params = param; }
+      });
+    }
+    else {
+      params = params.pop();
+    }
+    params = params.split("&");
+    params[0] = params[0].replace('/', '');
+    //If the parameter is found, return the value
+    for (var i=0;i<params.length;i++) {
+      var value = params[i].split("=");
+      if(value[0] === paramName){
+        // change '+' for space
+        return decodeURIComponent(value[1].replace(/\+/g, '%20'));
+      }
+    }
+    return false
   }
 
   // Create Element.remove() function if not exist

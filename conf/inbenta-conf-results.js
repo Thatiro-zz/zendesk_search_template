@@ -11,8 +11,8 @@ var inbApp = {
   sdkVersion: '1.22.0',
   sdkIntegrity: "sha384-ifuG86EAWx0kUeqJZTJxHpdJDFlKrXW0JcaBz2UsA5hdIXbvM9OmBQt6I98payUv",
   sdkAuth: {
-    publicKey: " ---------------- ",
-    domainKey: " ---------------- "
+    publicKey: " --------------------- ",
+    domainKey: " --------------------- "
   },
   // Inbenta standard SDK configuration - Check inbenta API/SDK documentation <https://apidocs.inbenta.io/> for more information
   sdkConfig: {
@@ -53,7 +53,7 @@ var inbApp = {
       conf: {
         refinements: [
           {
-            attributeName: 'CONTENT_TYPE',
+            attributeName: 'CATEGORY',
           }
         ]
       }
@@ -61,7 +61,7 @@ var inbApp = {
     tabs: {
       target: '#inbenta-tabs',
       conf: {
-        attributeName: 'Source'
+        attributeName: 'CONTENT_TYPE'
       }
     },
     results: {
@@ -71,12 +71,6 @@ var inbApp = {
     },
     search: {
       active: true // This will activate or deactivate the Inbenta's search engine in the page, if deactivated is recommended to disable the router too
-    },
-    resultsPerPageSelector: {
-      target: '#inbenta-results-per-page',
-      conf: {
-        options: [5, 10, 15]
-      }
     },
     router: {
       target: '#inbenta-router',
@@ -91,8 +85,8 @@ var inbApp = {
       conf: {
         attributes: [
           { name: 'desc(_relevance)', label: 'Relevance' },
-          { name: 'desc(Source)', label: 'Source - Descending' },
-          { name: 'asc(Source)', label: 'Source - Ascending' },
+          { name: 'desc(CONTENT_TYPE)', label: 'Source - Descending' },
+          { name: 'asc(CONTENT_TYPE)', label: 'Source - Ascending' },
         ],
       }
     },

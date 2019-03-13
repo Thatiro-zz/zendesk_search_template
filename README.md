@@ -60,6 +60,10 @@ userTypes: {
     agent: 0,
     manager: 0
 },
+// List of the paths where this script shouldn't be loaded (results and deflection pages)
+resultsDeflectionPaths: {
+    paths: ['/search', 'requests/new', 'community/posts/new']
+},
 ```
 
 - **sdkVersion**: The version of the SDK that will be used. 
@@ -67,6 +71,7 @@ userTypes: {
 - **sdkAuth**: Introduce the public key and domain key of the Backstage instance that will be used. [More info](https://help.inbenta.io/general/administration/finding-your-api-credentials/).
 - **sdkConfig**: Standard SDK configuration. [More info](https://developers.inbenta.io/search/javascript-sdk/sdk-setup#configuration-options).
 - **userTypes**: This configuration sets the profiles that will be used for each Helpcenter user role. This configuration will look for the variable 'HelpCenter.user.role'. Change these object to use the desired profiles for each role. To know which profile ids the Backstage instance has, go to Settings -> User Types in Backstage.
+- **resultsDeflectionPaths**: This configuration has an array of the paths where the 'inbenta-conf-autocompleter.js' shouldn't be loaded. This configuration is only available in the autocompleter configuration file to be able to load the Inbenta files that only use the autocompleter component in the header in order to avoid conflicts in pages like results or deflections where the files are loaded again.
 
 ##### Common components
 Most components have the following configuration structure:

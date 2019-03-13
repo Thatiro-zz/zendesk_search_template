@@ -57,11 +57,13 @@
     inbentaDiv.setAttribute("id", "inbenta-search-wrapper");
     inbentaDiv.setAttribute("class", "inbenta-search-wrapper");
 
-    if (document.querySelector(components.results.container)){
+    if (document.querySelector(components.results.container)) {
       var divMainTarget = document.querySelector(components.results.container);
       divMainTarget.parentNode.insertBefore(inbentaDiv, divMainTarget);
-    } else {
+    } else if (components.search && components.search.active) {
       throw new ReferenceError("The element to load inbenta does not exist");
+    } else {
+      createDiv(document.body, components.results);
     }
 
     // Create div for the autocompleter component if its active
@@ -238,6 +240,7 @@
 
   // Retrieve configuration data
   var app = window.inbAppSdk;
+  
   // Declare global variables
   var sdkScript, sdk, results, autocompleter, instants, lastChance;
 
@@ -256,19 +259,22 @@
   	};
   }
 
-  // Import & build SDK
-  importScript(sdkScript, function () {
-  	switch (document.readyState) {
-      case "complete":
-        start();
-        break;
-      default:
-        window.onload = function () {
+  if (app.loadCore !== false) {
+    // Import & build SDK
+    importScript(sdkScript, function () {
+      switch (document.readyState) {
+        case "complete":
           start();
-        };
-        break;
-    }
-  });
+          break;
+        default:
+          window.onload = function () {
+            start();
+          };
+          break;
+      }
+    });
+  }
+  
 
   /*--------------------------------------------------
   |                  start

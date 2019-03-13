@@ -25,6 +25,10 @@ var inbApp = {
     agent: 0,
     manager: 0
   },
+  // List of the paths where this script shouldn't be loaded (results and deflection pages)
+  resultsDeflectionPaths: {
+    paths: ['/search', 'requests/new', 'community/posts/new']
+  },
   // Inbenta custom application configuration
   appConfig: {
     autocompleter: {
@@ -47,3 +51,10 @@ var inbApp = {
 
 // Attach configuration to the window
 window.inbAppSdk = inbApp;
+
+window.inbAppSdk.loadCore = true;
+inbApp.resultsDeflectionPaths.paths.forEach(function (path) {
+  if (window.location.href.indexOf(path) !== -1) {
+    window.inbAppSdk.loadCore = false;
+  }
+});

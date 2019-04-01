@@ -2,6 +2,9 @@ body .section.hero {
   z-index: 9;
   position: relative; }
 
+body #inbenta-container {
+  display: none; }
+  
 body #inbenta-search-wrapper-autocompleter,
 body #inbenta-search-wrapper,
 body #inbenta-search-deflections {

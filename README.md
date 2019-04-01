@@ -127,6 +127,6 @@ autocompleter: {
 Here is a list of a search and a deflection integration examples to see how a basic configuration would look in a basic Zendesk template:
 
 - [Autocompleter page](https://inbenta-ps.zendesk.com/hc/en-us)
-- [Deflection page](https://inbenta-ps.zendesk.com/hc/en-us/requests)
+- [Deflection page](https://inbenta-ps.zendesk.com/hc/en-us/requests/new)
 - [Community Deflection page](https://inbenta-ps.zendesk.com/hc/en-us/community/posts/new)
 - [Results page](https://inbenta-ps.zendesk.com/hc/en-us/search)
